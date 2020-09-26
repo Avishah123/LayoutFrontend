@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Donor</title>
+</head>
+
+<body class="container mt-3">
+  <h1 class="text-center">NGO login Form</h1>
+  <div class="container">
+    <form action="" method="POST" onsubmit="return validation()">
+      
+      
+
+        <div class="form-group">
+        <label for="exampleFormControlInput1">Username</label>
+        <input type="text" name="username" class="form-control" id="Input1" placeholder="John">
+        <span id="input1"></span>
+      </div>
+      
+      
+
+      
+
+      
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Password</label>
+        <input type="password" name="password" class="form-control" id="Input1" placeholder="John">
+        <span id="input1"></span>
+      </div>
+
+    
+      
+
+      <input type="submit" value="Register" class="btn btn-block btn-secondary">
+
+    </form>
+    <br>
+    <br>
+  </div>
+  <!-- Optional JavaScript -->
+  <script type="text/javascript">
+    function validation() {
+      var fname = document.getElementById('Input1').value;
+      var lname = document.getElementById('Input2').value;
+      var number = document.getElementById('Input3').value;
+      var blood = document.getElementById('Input4').value;
+      var gender = document.getElementById('Input5').value;
+      var email = document.getElementById('Input6').value;
+      var city = document.getElementById('Input7').value;
+      var date = document.getElementById('Input8').value;
+      var textar = document.getElementById('Input9').value;
+
+      if (fname == "") {
+        document.getElementById('input1').innerHTML = "** please fill the name field";
+        return false;
+      }
+
+      if (gender == "") {
+        document.getElementById('input1').innerHTML = "** please fill the gender field";
+        return false;
+
+      }
+
+      if (fname.length < 2 || fname.length > 20) {
+        document.getElementById('input1').innerHTML = "Please fill the name field between 3 to 20 charecters*";
+        return false;
+
+
+      }
+
+      if (number.length != 10) {
+
+        document.getElementById('input3').innerHTML = "Mobile Number should be of 10 digits only* ";
+        return false;
+      }
+
+
+    }
+  </script>
+
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
